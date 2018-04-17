@@ -17,7 +17,7 @@ export class HomePage {
               private vision: GoogleCloudVisionServiceProvider,
               private db: AngularFireDatabase,
               private alert: AlertController) {
-    this.items = db.list('items');
+    this.items = this.db.list('items');
   }
   takePhoto() {
     const options: CameraOptions = {

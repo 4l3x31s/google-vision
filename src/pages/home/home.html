@@ -1,6 +1,6 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>My Stuff</ion-title>
+<ion-header >
+  <ion-navbar color="primary">
+    <ion-title>Google Cloud</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -8,10 +8,10 @@
   <ion-card *ngFor="let item of items | async">
     <img [src]="'data:image/png;base64,' + item.imageData"/>
     <ion-card-content>
-      <ion-list no-lines>
+      <!--<ion-list no-lines>
         <ion-list-header>Labels</ion-list-header>
         <ion-item *ngFor="let label of item.results[0].labelAnnotations">{{label.description}}</ion-item>
-      </ion-list>
+      </ion-list>-->
       <ion-list no-lines>
         <ion-list-header>Labels</ion-list-header>
         <ion-item *ngFor="let label of item.results[0].textAnnotations">{{label.description}}</ion-item>
